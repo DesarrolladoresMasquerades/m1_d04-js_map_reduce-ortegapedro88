@@ -2,6 +2,18 @@
 
 // Exercise 1: Return the total population of the given array (data) in the function 'totalpopulation' created below for you
 // the function must return 0 if the array is empty
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+
+
+// const callback = (oldaccumulator, currentElement )=>{
+//     newaccumulator = oldaccumulator + currentElement
+//     return newaccumulator  // MUST ALWAYS return the new accumulator
+// }
+
+// const sum = numbers.reduce( callback, 0) // 0 Starting value of the accumulator is teh second parameter
+// console.log(sum)
+
+
 const data = [
   {
     country: 'USA',
@@ -18,10 +30,7 @@ const data = [
 ]
 
 function totalpopulation(arr) {
-   // since we are calculating total, initial value of accumulator is set to 0
-   let total = arr.reduce((acc, elem) => {
-     //your code here...
-   }, 0)
+  let total = arr.reduce((acc, elem) => {return acc += elem}, 0)
   return total;
 }
 
